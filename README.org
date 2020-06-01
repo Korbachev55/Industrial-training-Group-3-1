@@ -1,0 +1,28 @@
+#+TITLE: Implementing group chat (aka whatsapp) with mizudroid and asterisk.
+
+* Dependencies
+
+Install the asterisk server and asterisk pjsip module or use install FreePBX.
+
+* Setup
+
+Clone this repository
+
+#+BEGIN_SRC sh
+$ git clone https://github.com/Korbachev55/Industrial-training-Group-3-1.git
+#+END_SRC
+
+Backup your files and copy the files to your asterisk configuration directory.
+
+#+BEGIN_SRC sh
+# cd /etc/asterisk
+# mv extensions.conf.backup
+# cp /path/to/thisrepo/extensions.conf extensions.conf
+#+END_SRC
+
+This configuration comes with three users: Test1, Test2 and Test3.
+To register to the asterisk server username and password are the same.
+Use the ip address of the machine running the asterisk server for registering.
+If you want to connect through a public ip forward the ports 5060 and 10001-20000.
+
+(Add pictures...)
