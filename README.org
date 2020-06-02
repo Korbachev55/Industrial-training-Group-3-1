@@ -4,7 +4,7 @@
 
 ** Server
 
-Install the asterisk server and asterisk pjsip module or use FreePBX.
+Install the Asterisk server and Asterisk pjsip module or use FreePBX.
 You can find instructions at https://wiki.asterisk.org/wiki/display/AST/Installing+Asterisk.
 
 ** Client
@@ -53,7 +53,7 @@ If you want to connect through a public ip, forward the ports 5060 and
 
 ** Client
 
-To set up mizu droid click the three dot menu in the right top corner.
+To set up Mizudroid click the three dot menu in the right top corner.
 
 [[./images/1.png]]
 
