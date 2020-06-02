@@ -54,16 +54,12 @@ If you want to connect through a public ip, forward the ports 5060 and
 ** Client
 
 To set up mizu droid click the three dot menu in the right top corner.
-#+ATTR_HTML: :align center
-[[./images/1.jpg]]
+#+html: <p align="center"><img src="images/1.jpg" /></p>
 
 To register to the asterisk server use the ip address of the machine
 running the asterisk server and the username and password you
 setup in "pjsip.conf".
-#+ATTR_HTML: :align center
-[[./images/2.jpg]]
+#+html: <p align="center"><img src="images/1.jpg" /></p>
 
 You should now get registered to your astersk server.
-#+ATTR_HTML: :align center
-[[./images/3.jpg]]
-
+#+html: <p align="center"><img src="images/1.jpg" /></p>
