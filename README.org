@@ -1,4 +1,4 @@
-#+TITLE: Implementing group chat with mizudroid and asterisk.
+#+TITLE: Implementing group chat with Mizudroid and Asterisk.
 
 * Dependencies
 
