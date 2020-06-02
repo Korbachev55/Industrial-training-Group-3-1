@@ -1,10 +1,20 @@
-#+TITLE: Implementing group chat (aka whatsapp) with mizudroid and asterisk.
+#+TITLE: Implementing group chat with mizudroid and asterisk.
 
 * Dependencies
 
-Install the asterisk server and asterisk pjsip module or use install FreePBX.
+** Server
+
+Install the asterisk server and asterisk pjsip module or use FreePBX.
+You can find instructions at https://wiki.asterisk.org/wiki/display/AST/Installing+Asterisk.
+
+** Client
+
+You should use a client that has sms capability, e.g. Mizudroid for Android:
+https://play.google.com/store/apps/details?id=com.mizuvoip.mizudroid.app&hl=en_US.
 
 * Setup
+
+** Server
 
 Clone this repository
 
@@ -12,17 +22,48 @@ Clone this repository
 $ git clone https://github.com/Korbachev55/Industrial-training-Group-3-1.git
 #+END_SRC
 
-Backup your files and copy the files to your asterisk configuration directory.
+Go to the asterisk configuration directory, backup your files and copy
+the files to your asterisk configuration directory.
 
 #+BEGIN_SRC sh
 # cd /etc/asterisk
-# mv extensions.conf.backup
-# cp /path/to/thisrepo/extensions.conf extensions.conf
+# mv extensions.conf extensions.conf.backup
+# mv pjsip.conf pjsip.conf.backup
+# cp /path/to/thisrepo/*.conf ./
 #+END_SRC
 
-This configuration comes with three users: Test1, Test2 and Test3.
-To register to the asterisk server username and password are the same.
-Use the ip address of the machine running the asterisk server for registering.
-If you want to connect through a public ip forward the ports 5060 and 10001-20000.
+This configuration comes with three preconfigured users: Test1, Test2
+and Test3.  The users are setup in the pjsip.conf file:
 
-(Add pictures...)
+#+BEGIN_SRC
+[test1](endpoint_internal)
+auth=test1
+aors=test1
+[test1](auth_userpass)
+password=test1
+username=test1
+[test1](aor_dynamic)
+#+END_SRC
+
+This sets up a user named "Test1" with password "Test1". To add more
+users simply copy this section and change "Test1".
+
+If you want to connect through a public ip, forward the ports 5060 and
+10001-20000.
+
+** Client
+
+To set up mizu droid click the three dot menu in the right top corner.
+#+ATTR_HTML: :align center
+[[./images/1.jpg]]
+
+To register to the asterisk server use the ip address of the machine
+running the asterisk server and the username and password you
+setup in "pjsip.conf".
+#+ATTR_HTML: :align center
+[[./images/2.jpg]]
+
+You should now get registered to your astersk server.
+#+ATTR_HTML: :align center
+[[./images/3.jpg]]
+
