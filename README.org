@@ -16,6 +16,8 @@ https://play.google.com/store/apps/details?id=com.mizuvoip.mizudroid.app&hl=en_U
 
 ** Server
 
+*** Running Asterisk on top of another Linux distribution
+
 Clone this repository
 
 #+BEGIN_SRC sh
@@ -31,6 +33,12 @@ the files to your asterisk configuration directory.
 # mv pjsip.conf pjsip.conf.backup
 # cp /path/to/thisrepo/*.conf ./
 #+END_SRC
+
+*** FreePBX
+
+You need to copy the files using some different method.
+
+*** Users
 
 This configuration comes with three preconfigured users: Test1, Test2
 and Test3.  The users are setup in the pjsip.conf file:
